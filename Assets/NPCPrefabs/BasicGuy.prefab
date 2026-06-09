@@ -106,3 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
   IsAI: 0
   Name: 
+  StartPos: {x: 0, y: 0}
+  EndPos: {x: -100, y: 0}
+  Timer: 0
+  Duration: 10

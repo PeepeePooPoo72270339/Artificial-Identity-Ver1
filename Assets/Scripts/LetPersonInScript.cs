@@ -4,6 +4,7 @@ public class LetPersonInScript : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject NewNPCToAdd;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +19,7 @@ public class LetPersonInScript : MonoBehaviour
             NewNPCToAdd = GameManager.GetComponent<GameManagerScript>().NPCSEntering[0];
 
         }
+        
 
     }
 

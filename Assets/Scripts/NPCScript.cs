@@ -4,6 +4,11 @@ public class NPCScript : MonoBehaviour
 {
     public bool IsAI;
     public string Name;
+    public Vector2 StartPos;
+    public Vector2 EndPos;
+    public bool IsLetIn;
+    public float Timer;
+    public float Duration;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +37,15 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Timer < Duration)
+        {
+            float t = Timer / Duration;
+            transform.position = Vector2.Lerp(StartPos, EndPos, t);
+            Timer += Time.deltaTime;
+
+
+        }
         
+
     }
 }
