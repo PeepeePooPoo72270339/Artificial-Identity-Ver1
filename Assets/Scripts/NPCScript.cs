@@ -23,6 +23,12 @@ public class NPCScript : MonoBehaviour
         
     }
 
+    public void AIKill()
+    {
+        print("Game Over");
+    
+    }
+
     // Update is called once per frame
     void Update()
     {

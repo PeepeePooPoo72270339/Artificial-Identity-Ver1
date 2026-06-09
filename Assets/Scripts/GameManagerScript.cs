@@ -24,7 +24,11 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         OpenMap.performed += ctx => ShowMap();
-        print(NPCSEntering.Count);
+        if (NPCSEntering.Count <= 0)
+        {
+        
+        
+        }
 
     }
 
@@ -46,11 +50,18 @@ public class GameManagerScript : MonoBehaviour
         for (int i = 0; i < PeopleEnteringToday; i++)
         {
             Instantiate(PeoplePrefab);
-            NPCSEntering.Add(PeoplePrefab);
+            //NPCSEntering.Add(PeoplePrefab);
+            
 
+        }
+        for (int i = 0; i < PeopleEnteringToday; i++)
+        {
+            NPCSEntering.Add(GameObject.FindGameObjectsWithTag("NPC")[i]);
+        
         }
     
     }
+
         
 
 }
