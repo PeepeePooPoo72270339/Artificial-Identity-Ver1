@@ -9,6 +9,10 @@ public class GameManagerScript : MonoBehaviour
     public int PeopleLeaving;
     public int PeopleEnteringMin;
     public int PeopleEnteringMax;
+    public GameObject PeoplePrefab;
+    [SerializeField]
+    public List<GameObject> NPCSEntering;
+    public List<GameObject> NPCSInTown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,19 +24,32 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         OpenMap.performed += ctx => ShowMap();
+        print(NPCSEntering.Count);
 
     }
 
     void ShowMap()
     {
         print("Map");
+        
 
     }
-    [SerializeField]
-    public List<GameObject> NPC;
+
     public void NewDay()
     {
         PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
+        SpawnPeople();
+        
+    }
+    public void SpawnPeople()
+    {
+        for (int i = 0; i < PeopleEnteringToday; i++)
+        {
+            Instantiate(PeoplePrefab);
+            NPCSEntering.Add(PeoplePrefab);
+
+        }
+    
     }
         
 

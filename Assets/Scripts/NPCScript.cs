@@ -3,6 +3,7 @@ using UnityEngine;
 public class NPCScript : MonoBehaviour
 {
     public bool IsAI;
+    public string Name;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,8 @@ public class NPCScript : MonoBehaviour
             IsAI = false;
         
         }
+        print(IsAI);
+
         
     }
 
