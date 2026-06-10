@@ -28,6 +28,7 @@ public class LetPersonInScript : MonoBehaviour
         print("Letguy in");
         if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
         {
+            GameManager.GetComponent<GameManagerScript>().NPCSEntering[0].GetComponent<NPCScript>().IsLetIn = true;
             GameManager.GetComponent<GameManagerScript>().NPCSInTown.Add(NewNPCToAdd);
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
         }

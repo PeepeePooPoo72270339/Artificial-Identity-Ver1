@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using System.Collections;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManagerScript : MonoBehaviour
     public int PeopleEnteringMin;
     public int PeopleEnteringMax;
     public GameObject PeoplePrefab;
+    private bool DayOverBool;
     [SerializeField]
     public List<GameObject> NPCSEntering;
     public List<GameObject> NPCSInTown;
@@ -18,6 +20,7 @@ public class GameManagerScript : MonoBehaviour
     {
         OpenMap.Enable();
         NewDay();
+        DayOverBool = true;
     }
 
     // Update is called once per frame
@@ -26,11 +29,12 @@ public class GameManagerScript : MonoBehaviour
         OpenMap.performed += ctx => ShowMap();
         if (NPCSEntering.Count <= 0)
         {
-        
-        
+            print("Day End");
+            NewDay();
         }
 
     }
+    
 
     void ShowMap()
     {
@@ -41,6 +45,14 @@ public class GameManagerScript : MonoBehaviour
 
     public void NewDay()
     {
+        if (DayOverBool == true)
+        {
+            StartCoroutine(KillCheck());
+
+            DayOverBool = false;
+
+        }
+        
         PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
         SpawnPeople();
         
@@ -61,7 +73,25 @@ public class GameManagerScript : MonoBehaviour
         }
     
     }
+    public IEnumerator KillCheck()
+    {
+        for (int i = 0; i < NPCSInTown.Count; i++)
+        {
+            if (NPCSInTown[i].GetComponent<NPCScript>().IsAI == true)
+            {
+                NPCSInTown[i].GetComponent<NPCScript>().AIKill();
+            }
+            if (i == NPCSInTown.Count - 1)
+            {
+                DayOverBool = true;
+            
+            }
+        }
 
-        
+        yield return null;
+
+    }
+
+
 
 }

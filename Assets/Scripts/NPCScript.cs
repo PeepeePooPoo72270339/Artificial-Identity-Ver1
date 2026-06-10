@@ -37,14 +37,17 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timer < Duration)
+        if (IsLetIn == true)
         {
-            float t = Timer / Duration;
-            transform.position = Vector2.Lerp(StartPos, EndPos, t);
-            Timer += Time.deltaTime;
+            if (Timer < Duration)
+            {
+                float t = Timer / Duration;
+                transform.position = Vector2.Lerp(StartPos, EndPos, t);
+                Timer += Time.deltaTime;
 
-
+            }
         }
+
         
 
     }
