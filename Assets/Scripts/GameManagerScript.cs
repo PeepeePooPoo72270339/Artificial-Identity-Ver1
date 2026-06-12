@@ -12,6 +12,7 @@ public class GameManagerScript : MonoBehaviour
     public int PeopleEnteringMax;
     public GameObject PeoplePrefab;
     public GameObject Map;
+    public GameObject GameCamera;
     private bool DayOverBool;
     [SerializeField]
     public List<GameObject> NPCSEntering;
