@@ -11,6 +11,7 @@ public class GameManagerScript : MonoBehaviour
     public int PeopleEnteringMin;
     public int PeopleEnteringMax;
     public GameObject PeoplePrefab;
+    public GameObject Map;
     private bool DayOverBool;
     [SerializeField]
     public List<GameObject> NPCSEntering;
@@ -27,18 +28,13 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         OpenMap.performed += ctx => ShowMap();
-        if (NPCSEntering.Count <= 0)
-        {
-            print("Day End");
-            NewDay();
-        }
-
     }
     
 
     void ShowMap()
     {
         print("Map");
+        Map.GetComponent<MapScript>().ToggleMap();
         
 
     }
