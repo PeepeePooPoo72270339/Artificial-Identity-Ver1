@@ -1617,6 +1617,8 @@ MonoBehaviour:
   npcIDs:
   - {fileID: 9021944843228416354, guid: daa85e05a5e4e994b9889c385d6fdb44, type: 3}
   - {fileID: 522113001553786102, guid: fd0e95a3574c16644a2cb09d6fd865d7, type: 3}
+  - {fileID: 5119211030968153825, guid: 7bd2d7cdacaf16c49a25dba4120c868b, type: 3}
+  - {fileID: 833549533322186497, guid: 4bc58c2f8107f7e498ed06bc2da57468, type: 3}
 --- !u!1001 &1699594003243799732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1631,7 +1633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8641034700222413754, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.329194
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 8641034700222413754, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: m_LocalPosition.y
