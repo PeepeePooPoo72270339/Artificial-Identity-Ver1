@@ -775,9 +775,6 @@ MonoBehaviour:
   ButtonLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  Locations:
-  - {x: 20, y: 0}
-  - {x: 0, y: 0}
   LocationID: 0
 --- !u!54 &545977245
 Rigidbody:
@@ -1621,9 +1618,6 @@ MonoBehaviour:
   ButtonLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  Locations:
-  - {x: 20, y: 0}
-  - {x: 0, y: 0}
   LocationID: 1
 --- !u!212 &1782186320
 SpriteRenderer:
@@ -1839,6 +1833,18 @@ PrefabInstance:
     - target: {fileID: 2072932355110809642, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1732929224}
+    - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
+      propertyPath: CamPos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
+      propertyPath: CamPos.Array.data[1].x
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8641034700222413754, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,6 +5,8 @@ public class MapScript : MonoBehaviour
 {
     public SpriteRenderer MapPicture;
     public bool IsMapOpen;
+    public GameObject Camera;
+    public Vector2[] CamPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,9 +28,12 @@ public class MapScript : MonoBehaviour
         else 
         {
             IsMapOpen = false;
-        }
-
-    
+        }  
+    }
+    public void Warp(int WarpLocation)
+    {
+        print(WarpLocation);
+        Camera.transform.position = new Vector3(CamPos[WarpLocation].x, CamPos[WarpLocation].y, Camera.transform.position.z);
     
     
     }

@@ -10,7 +10,7 @@ public class MapButtonsScript : MonoBehaviour
     public InputAction MouseClick;
     public Vector2 SelfPos;
     public LayerMask ButtonLayer;
-    public Vector2[] Locations;
+    private Vector2[] Locations;
     public int LocationID;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,11 +27,12 @@ public class MapButtonsScript : MonoBehaviour
         Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
         if (Physics.Raycast(mouseRay, out RaycastHit hit, Mathf.Infinity, ButtonLayer))
         {
-            if (MouseClick.WasPressedThisFrame())
+            if (MouseClick.WasPressedThisFrame() && hit.collider.gameObject == Self)
             {
-                print("hit");
-                Camera.main.transform.position = new Vector3(Locations[LocationID].x, Locations[LocationID].y, Camera.main.transform.position.z);
+                //print("hit" + hit.collider.gameObject.name);
+                //Camera.main.transform.position = new Vector3(Locations[LocationID].x, Locations[LocationID].y, Camera.main.transform.position.z);
                 MapParent.GetComponent<MapScript>().IsMapOpen = false;
+                MapParent.GetComponent<MapScript>().Warp(LocationID);
 
             }
         
