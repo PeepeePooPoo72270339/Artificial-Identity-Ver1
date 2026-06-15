@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 751081892}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1031,12 +1031,14 @@ MonoBehaviour:
   PeopleEnteringToday: 0
   PeopleLeaving: 0
   PeopleEnteringMin: 2
-  PeopleEnteringMax: 4
+  PeopleEnteringMax: 5
   PeoplePrefab: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
   Map: {fileID: 737917703}
   GameCamera: {fileID: 1732929224}
   NPCSEntering: []
   NPCSInTown: []
+  DeadNPCS: []
+  NonAINPCS: []
 --- !u!4 &751081893
 Transform:
   m_ObjectHideFlags: 0

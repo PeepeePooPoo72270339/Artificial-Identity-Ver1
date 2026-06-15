@@ -30,6 +30,10 @@ public class LetPersonInScript : MonoBehaviour
         {
             GameManager.GetComponent<GameManagerScript>().NPCSEntering[0].GetComponent<NPCScript>().IsLetIn = true;
             GameManager.GetComponent<GameManagerScript>().NPCSInTown.Add(NewNPCToAdd);
+            if (NewNPCToAdd.GetComponent<NPCScript>().IsAI == false)
+            {
+                GameManager.GetComponent<GameManagerScript>().NonAINPCS.Add(NewNPCToAdd);
+            }
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
         }
 

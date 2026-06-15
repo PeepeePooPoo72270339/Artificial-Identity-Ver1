@@ -17,6 +17,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     public List<GameObject> NPCSEntering;
     public List<GameObject> NPCSInTown;
+    public List<GameObject> DeadNPCS;
+    public List<GameObject> NonAINPCS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

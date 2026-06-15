@@ -24,7 +24,15 @@ public class BedScript : MonoBehaviour
         {
             if (GoToBed.WasPressedThisFrame() && hit.collider.gameObject == Self)
             {
-                print("Sleep");
+                if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count == 0)
+                {
+                    print("Sleep");
+                    GameManager.GetComponent<GameManagerScript>().NewDay();
+                }
+                else
+                {
+                    print("People are trying to enter");                
+                }
             
             
             }
