@@ -14,18 +14,17 @@ public class MapScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MapPicture.enabled = IsMapOpen;
         
     }
     public void ToggleMap()
     {
         if (IsMapOpen == false)
         {
-            MapPicture.enabled = true;
             IsMapOpen = true;
         }
         else 
         {
-            MapPicture.enabled = false;
             IsMapOpen = false;
         }
 
