@@ -19,6 +19,7 @@ public class LetPersonInScript : MonoBehaviour
             NewNPCToAdd = GameManager.GetComponent<GameManagerScript>().NPCSEntering[0];
 
         }
+        return;
         
 
     }
@@ -28,12 +29,15 @@ public class LetPersonInScript : MonoBehaviour
         print("Letguy in");
         if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
         {
-            GameManager.GetComponent<GameManagerScript>().NPCSEntering[0].GetComponent<NPCScript>().IsLetIn = true;
+            NewNPCToAdd.GetComponent<NPCScript>().IsLetIn = true;
+            NewNPCToAdd.tag = "InTown";
+            //GameManager.GetComponent<GameManagerScript>().NPCSEntering[NewNPCToAdd].GetComponent<NPCScript>().IsLetIn = true;
             GameManager.GetComponent<GameManagerScript>().NPCSInTown.Add(NewNPCToAdd);
             if (NewNPCToAdd.GetComponent<NPCScript>().IsAI == false)
             {
                 GameManager.GetComponent<GameManagerScript>().NonAINPCS.Add(NewNPCToAdd);
             }
+            
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
         }
 

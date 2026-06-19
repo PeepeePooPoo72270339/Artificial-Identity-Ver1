@@ -14,6 +14,7 @@ public class NPCScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        IsLetIn = false;
         int RandomNumberGen = Random.Range(1, 10);
         GameManager = GameObject.Find("GameManager");
         if (RandomNumberGen > 6)

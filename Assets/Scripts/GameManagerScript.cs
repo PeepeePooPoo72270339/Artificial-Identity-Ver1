@@ -6,6 +6,7 @@ using System.Collections;
 public class GameManagerScript : MonoBehaviour
 {
     public InputAction OpenMap;
+    public int Day;
     public int PeopleEnteringToday;
     public int PeopleLeaving;
     public int PeopleEnteringMin;
@@ -51,7 +52,7 @@ public class GameManagerScript : MonoBehaviour
             DayOverBool = false;
 
         }
-        
+        Day++;
         PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
         SpawnPeople();
         
@@ -68,6 +69,7 @@ public class GameManagerScript : MonoBehaviour
         for (int i = 0; i < PeopleEnteringToday; i++)
         {
             NPCSEntering.Add(GameObject.FindGameObjectsWithTag("NPC")[i]);
+            //bugfix this part of the code
         
         }
     

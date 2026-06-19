@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - GameManager
+  - InTown
   layers:
   - Default
   - TransparentFX
