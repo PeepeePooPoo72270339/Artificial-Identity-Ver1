@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9313c428e3eb74b89aef2185c98da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
+  SpawnPoint: {fileID: 0}
   GameManager: {fileID: 0}
   IsAI: 0
   Name: 
@@ -111,7 +112,7 @@ MonoBehaviour:
   EndPos: {x: -100, y: 0}
   IsLetIn: 0
   Timer: 0
-  Duration: 10
+  Duration: 2
   IsDead: 0
   EnteringDialogue:
   - Fuck you
