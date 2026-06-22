@@ -22,9 +22,14 @@ public class NPCText : MonoBehaviour
         if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
         {
             NPC = GameManager.GetComponent<GameManagerScript>().NPCSEntering[0];
+            Dialogue.text = NPC.GetComponent<NPCScript>().EnteringDialogue[Text_Line];
 
         }
-        Dialogue.text = NPC.GetComponent<NPCScript>().EnteringDialogue[Text_Line];
+        else
+        {
+            Dialogue.text = "";
+        }
+        
 
     }
 }
