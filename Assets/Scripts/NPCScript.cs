@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using System.Collections;
+
 
 public class NPCScript : MonoBehaviour
 {
@@ -11,6 +15,7 @@ public class NPCScript : MonoBehaviour
     public float Timer;
     public float Duration;
     public bool IsDead;
+    public List<string> EnteringDialogue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
