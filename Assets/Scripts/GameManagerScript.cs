@@ -5,6 +5,8 @@ using System.Collections;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public float Timer;
+    public float Duration;
     public InputAction OpenMap;
     public int Day;
     public int PeopleEnteringToday;
@@ -20,18 +22,35 @@ public class GameManagerScript : MonoBehaviour
     public List<GameObject> NPCSInTown;
     public List<GameObject> DeadNPCS;
     public List<GameObject> NonAINPCS;
+    //SpawnPos stuff
+    public Vector2 SpawnPos;
+    public Vector2 MidPos;
+    private Quaternion Rotation;
+    public GameObject SpawnerObject;
+    public GameObject Middle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SpawnPos = SpawnerObject.transform.position;
+        MidPos = Middle.transform.position;
         OpenMap.Enable();
         NewDay();
         DayOverBool = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         OpenMap.performed += ctx => ShowMap();
+        if (Timer < Duration && NPCSEntering.Count > 0)
+        {
+            float t = Timer / Duration;
+            NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, MidPos, t);
+            Timer += Time.deltaTime;
+
+
+        }
     }
     
 
@@ -61,7 +80,7 @@ public class GameManagerScript : MonoBehaviour
     {
         for (int i = 0; i < PeopleEnteringToday; i++)
         {
-            Instantiate(PeoplePrefab);
+            Instantiate(PeoplePrefab, SpawnPos, Rotation);
             //NPCSEntering.Add(PeoplePrefab);
             
 

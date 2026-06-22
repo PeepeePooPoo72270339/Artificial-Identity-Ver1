@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class NPCText : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class NPCText : MonoBehaviour
     public GameObject NPC;
     public TMP_Text Dialogue;
     public int Text_Line;
+    public InputAction ParseText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

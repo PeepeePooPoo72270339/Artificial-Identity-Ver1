@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class GunScript : MonoBehaviour
 {
     public GameObject Self;
+    public GameObject ShellsOutline;
     public GameObject Outline;
     public InputAction MouseClick;
     public LayerMask ButtonLayer;
@@ -26,6 +27,7 @@ public class GunScript : MonoBehaviour
             if (hit.collider.gameObject == Self)
             {
                 Outline.GetComponent<SpriteRenderer>().enabled = true;
+                ShellsOutline.GetComponent<SpriteRenderer>().enabled = true;
                 if (MouseClick.WasPressedThisFrame())
                 {
                     Self.GetComponent<ShootScript>().Kill();
@@ -37,7 +39,7 @@ public class GunScript : MonoBehaviour
         else
         {
             Outline.GetComponent<SpriteRenderer>().enabled = false;
-
+            ShellsOutline.GetComponent<SpriteRenderer>().enabled = false;
 
         }
         

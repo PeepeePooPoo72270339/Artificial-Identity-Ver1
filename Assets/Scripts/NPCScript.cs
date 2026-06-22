@@ -6,6 +6,7 @@ using System.Collections;
 
 public class NPCScript : MonoBehaviour
 {
+    public GameObject SpawnPoint;
     public GameObject GameManager;
     public bool IsAI;
     public string Name;
@@ -33,7 +34,7 @@ public class NPCScript : MonoBehaviour
         
         }
         print(IsAI);
-
+        
         
     }
 
@@ -56,6 +57,12 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (IsLetIn == false)
+        {
+            StartPos = transform.position;
+
+        }
+
         if (IsLetIn == true)
         {
             if (Timer < Duration)
@@ -66,8 +73,6 @@ public class NPCScript : MonoBehaviour
 
             }
         }
-
-        
 
     }
 }

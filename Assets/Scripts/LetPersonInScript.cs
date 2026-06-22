@@ -39,6 +39,7 @@ public class LetPersonInScript : MonoBehaviour
             }
             
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
+            GameManager.GetComponent<GameManagerScript>().Timer = 0;
         }
 
 
