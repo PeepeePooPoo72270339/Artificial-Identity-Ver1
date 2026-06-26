@@ -46,7 +46,7 @@ public class LetPersonInScript : MonoBehaviour
 
         IEnumerator Delay()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.5f);
             GameManager.GetComponent<GameManagerScript>().Timer = 0;
 
         }

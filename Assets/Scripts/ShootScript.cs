@@ -6,11 +6,14 @@ public class ShootScript : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject NPC;
+    private bool CanShoot;
     //public List<GameObject> NPCS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        CanShoot = false;
+        StartCoroutine(StartDelay());
+        
         
     }
 
@@ -26,8 +29,9 @@ public class ShootScript : MonoBehaviour
     }
     public void Kill()
     {
-        if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
+        if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0 && CanShoot == true)
         {
+            CanShoot = false;
             Destroy(NPC);
             //GameManager.GetComponent<GameManagerScript>().NPCSEntering.RemoveAt(0);
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NPC);
@@ -39,8 +43,14 @@ public class ShootScript : MonoBehaviour
     }
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         GameManager.GetComponent<GameManagerScript>().Timer = 0;
+        CanShoot = true;
 
+    }
+    IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        CanShoot = true;
     }
 }

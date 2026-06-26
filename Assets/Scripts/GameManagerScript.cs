@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public float Timer;
     public float Duration;
     public InputAction OpenMap;
+    public InputAction ParseDialogue;
     public int Day;
     public int PeopleEnteringToday;
     public int PeopleLeaving;
