@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,8 +31,16 @@ public class ShootScript : MonoBehaviour
             Destroy(NPC);
             //GameManager.GetComponent<GameManagerScript>().NPCSEntering.RemoveAt(0);
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NPC);
+            StartCoroutine(Delay());
+            
 
         }
         print("ShotGuy");
+    }
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1);
+        GameManager.GetComponent<GameManagerScript>().Timer = 0;
+
     }
 }

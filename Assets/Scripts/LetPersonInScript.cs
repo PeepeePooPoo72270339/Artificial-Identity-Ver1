@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class LetPersonInScript : MonoBehaviour
@@ -39,7 +40,15 @@ public class LetPersonInScript : MonoBehaviour
             }
             
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
+            StartCoroutine(Delay());
+            
+        }
+
+        IEnumerator Delay()
+        {
+            yield return new WaitForSeconds(1);
             GameManager.GetComponent<GameManagerScript>().Timer = 0;
+
         }
 
 
