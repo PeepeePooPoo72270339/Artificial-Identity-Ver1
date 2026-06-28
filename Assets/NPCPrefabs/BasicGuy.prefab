@@ -115,4 +115,6 @@ MonoBehaviour:
   Duration: 2
   IsDead: 0
   EnteringDialogue:
-  - Fuck you
+  - Hello
+  - This Is a
+  - Test Dialogue

@@ -7,6 +7,7 @@ public class ShootScript : MonoBehaviour
     public GameObject GameManager;
     public GameObject NPC;
     private bool CanShoot;
+    public GameObject NPCTXT;
     //public List<GameObject> NPCS;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +36,7 @@ public class ShootScript : MonoBehaviour
             Destroy(NPC);
             //GameManager.GetComponent<GameManagerScript>().NPCSEntering.RemoveAt(0);
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NPC);
+            NPCTXT.GetComponent<NPCText>().ResetTXT();
             StartCoroutine(Delay());
             
 

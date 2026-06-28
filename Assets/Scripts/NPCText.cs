@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class NPCText : MonoBehaviour
@@ -12,6 +13,7 @@ public class NPCText : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ParseText.Enable();
         
         
     }
@@ -29,7 +31,30 @@ public class NPCText : MonoBehaviour
         {
             Dialogue.text = "";
         }
-        
+        ParseText.performed += ctx => ParseLine();
 
+
+    }
+    public void ParseLine()
+    { 
+        if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count >0)
+        {
+            if (Text_Line < NPC.GetComponent<NPCScript>().EnteringDialogue.Count - 1)
+            {
+                Text_Line++;                
+            }
+        }  
+    
+    }
+    public void ResetTXT()
+    {
+        Text_Line = 0;
+    
+    }
+    public void Blank()
+    {
+        Dialogue.text = "";
+    
+    
     }
 }

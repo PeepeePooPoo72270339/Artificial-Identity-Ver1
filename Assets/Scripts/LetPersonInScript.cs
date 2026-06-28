@@ -5,6 +5,7 @@ public class LetPersonInScript : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject NewNPCToAdd;
+    public GameObject NPCTXT;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +41,7 @@ public class LetPersonInScript : MonoBehaviour
             }
             
             GameManager.GetComponent<GameManagerScript>().NPCSEntering.Remove(NewNPCToAdd);
+            NPCTXT.GetComponent<NPCText>().ResetTXT();
             StartCoroutine(Delay());
             
         }

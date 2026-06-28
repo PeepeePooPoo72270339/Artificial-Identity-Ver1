@@ -366,13 +366,21 @@ MonoBehaviour:
   Dialogue: {fileID: 125594867}
   Text_Line: 0
   ParseText:
-    m_Name: 
+    m_Name: Parse Text
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: f63ab244-84c0-4d43-a476-47f38015c69c
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d4c08572-87ff-48d8-be98-88a23e4c883c
+      m_Path: <Keyboard>/enter
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Parse Text
+      m_Flags: 0
     m_Flags: 0
 --- !u!1 &221937024
 GameObject:
@@ -791,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LetPersonInScript
   GameManager: {fileID: 751081891}
   NewNPCToAdd: {fileID: 0}
+  NPCTXT: {fileID: 125594865}
 --- !u!1 &498446974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,6 +1126,23 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Open Map
+      m_Flags: 0
+    m_Flags: 0
+  ParseDialogue:
+    m_Name: Parse Dialogue
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d1448dea-903a-4895-a720-9a290360564a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 56000686-e1a4-4872-9e60-b0dbe3444f26
+      m_Path: <Keyboard>/enter
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Parse Dialogue
       m_Flags: 0
     m_Flags: 0
   Day: 0
@@ -2821,6 +2847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShootScript
   GameManager: {fileID: 751081891}
   NPC: {fileID: 0}
+  NPCTXT: {fileID: 125594865}
 --- !u!114 &1991435194
 MonoBehaviour:
   m_ObjectHideFlags: 0
