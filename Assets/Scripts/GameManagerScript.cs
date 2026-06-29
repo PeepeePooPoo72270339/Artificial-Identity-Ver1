@@ -30,6 +30,7 @@ public class GameManagerScript : MonoBehaviour
     private Quaternion Rotation;
     public GameObject SpawnerObject;
     public GameObject Middle;
+    public GameObject NPCSList;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -81,9 +82,12 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnPeople()
     {
+        
         for (int i = 0; i < PeopleEnteringToday; i++)
         {
-            Instantiate(PeoplePrefab, SpawnPos, Rotation);
+            int NPCID = Random.Range(0, 12);
+            GameObject Person = NPCSList.GetComponent<NPCList>().npcIDs[NPCID];
+            Instantiate(Person, SpawnPos, Rotation);
             //NPCSEntering.Add(PeoplePrefab);
             
 
