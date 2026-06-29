@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject PeoplePrefab;
     public GameObject Map;
     public GameObject GameCamera;
+    public GameObject UImanager;
     private bool DayOverBool;
     [SerializeField]
     public List<GameObject> NPCSEntering;
@@ -59,6 +60,7 @@ public class GameManagerScript : MonoBehaviour
     {
         print("Map");
         Map.GetComponent<MapScript>().ToggleMap();
+        UImanager.GetComponent<UIElementsList>().Toggle();
         
 
     }
