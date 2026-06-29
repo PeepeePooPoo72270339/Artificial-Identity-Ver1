@@ -1181,7 +1181,7 @@ MonoBehaviour:
   MidPos: {x: 0, y: 0}
   SpawnerObject: {fileID: 1561391546}
   Middle: {fileID: 498446974}
-  NPCList: {fileID: 2121651734}
+  NPCSList: {fileID: 2121651734}
 --- !u!4 &751081893
 Transform:
   m_ObjectHideFlags: 0
