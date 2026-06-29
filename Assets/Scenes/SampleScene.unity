@@ -498,11 +498,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8929da4176239c54b92484d63f8c6e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIElementsList
-  UIElemnts:
+  UIElem:
   - {fileID: 482866492}
   - {fileID: 125594865}
   DialogueBox:
   - {fileID: 125594865}
+  ElementsActive: 0
 --- !u!1 &402971623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1172,7 @@ MonoBehaviour:
   PeoplePrefab: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
   Map: {fileID: 737917703}
   GameCamera: {fileID: 1732929224}
+  UImanager: {fileID: 221937024}
   NPCSEntering: []
   NPCSInTown: []
   DeadNPCS: []
