@@ -5,11 +5,12 @@ using System.Collections;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public int Day;
     public float Timer;
     public float Duration;
     public InputAction OpenMap;
     public InputAction ParseDialogue;
-    public int Day;
+    
     public int PeopleEnteringToday;
     public int PeopleLeaving;
     public int PeopleEnteringMin;
@@ -20,6 +21,8 @@ public class GameManagerScript : MonoBehaviour
     public GameObject UImanager;
     private bool DayOverBool;
     [SerializeField]
+    public List<GameObject> DaysToGrab;
+    public GameObject CurrentDay;
     public List<GameObject> NPCSEntering;
     public List<GameObject> NPCSInTown;
     public List<GameObject> DeadNPCS;
@@ -54,6 +57,7 @@ public class GameManagerScript : MonoBehaviour
 
 
         }
+        CurrentDay = DaysToGrab[Day];
     }
     
 
@@ -75,11 +79,34 @@ public class GameManagerScript : MonoBehaviour
             DayOverBool = false;
 
         }
+        
         Day++;
-        PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
-        SpawnPeople();
+        PeopleEnteringToday = DaysToGrab[Day].GetComponent<NPCList>().npcIDs.Count;
+        NonRandomizedSpawn();
+        
+        //PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
+        //SpawnPeople();
+        
         
     }
+    public void NonRandomizedSpawn()
+    {
+        for (int i = 0; i < PeopleEnteringToday; i++)
+        {
+            int NPCID = i;
+            GameObject Person = DaysToGrab[Day].GetComponent<NPCList>().npcIDs[i];
+            Instantiate(Person, SpawnPos, Rotation);
+
+        }
+        for (int i = 0; i < PeopleEnteringToday; i++)
+        {
+            NPCSEntering.Add(GameObject.FindGameObjectsWithTag("NPC")[i]);
+            //bugfix this part of the code
+
+        }
+
+    }
+    
     public void SpawnPeople()
     {
         

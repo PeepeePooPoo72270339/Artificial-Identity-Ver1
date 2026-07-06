@@ -12,6 +12,7 @@ public class MapButtonsScript : MonoBehaviour
     public LayerMask ButtonLayer;
     private Vector2[] Locations;
     public int LocationID;
+    public Vector3 NormalSize;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,14 +28,24 @@ public class MapButtonsScript : MonoBehaviour
         Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
         if (Physics.Raycast(mouseRay, out RaycastHit hit, Mathf.Infinity, ButtonLayer))
         {
-            if (MouseClick.WasPressedThisFrame() && hit.collider.gameObject == Self)
+            if ( hit.collider.gameObject == Self)
             {
-                //print("hit" + hit.collider.gameObject.name);
-                //Camera.main.transform.position = new Vector3(Locations[LocationID].x, Locations[LocationID].y, Camera.main.transform.position.z);
-                MapParent.GetComponent<MapScript>().IsMapOpen = false;
-                MapParent.GetComponent<MapScript>().Warp(LocationID);
+                Vector3 ExpandScale = new Vector3(1.3f, 1.3f, 1.3f);
+                Self.transform.localScale = ExpandScale;
+                if (MouseClick.WasPressedThisFrame())
+                {
+                    //print("hit" + hit.collider.gameObject.name);
+                    //Camera.main.transform.position = new Vector3(Locations[LocationID].x, Locations[LocationID].y, Camera.main.transform.position.z);
+                    MapParent.GetComponent<MapScript>().IsMapOpen = false;
+                    MapParent.GetComponent<MapScript>().Warp(LocationID);
 
+                }
             }
+        }
+        else
+        {
+            Self.transform.localScale = NormalSize;
+        
         
         }
     }

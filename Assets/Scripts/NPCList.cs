@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCList : MonoBehaviour
 {
+    public int Day_Number;
+    public int ListLength;
     public List<GameObject> npcIDs;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +16,7 @@ public class NPCList : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ListLength = npcIDs.Count;
         
     }
 }
