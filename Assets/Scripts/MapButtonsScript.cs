@@ -13,6 +13,7 @@ public class MapButtonsScript : MonoBehaviour
     private Vector2[] Locations;
     public int LocationID;
     public Vector3 NormalSize;
+    public Vector3 ExpandSize;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,7 +31,7 @@ public class MapButtonsScript : MonoBehaviour
         {
             if ( hit.collider.gameObject == Self)
             {
-                Vector3 ExpandScale = new Vector3(1.3f, 1.3f, 1.3f);
+                Vector3 ExpandScale = ExpandSize;
                 Self.transform.localScale = ExpandScale;
                 if (MouseClick.WasPressedThisFrame())
                 {
