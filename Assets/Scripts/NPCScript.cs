@@ -12,6 +12,8 @@ public class NPCScript : MonoBehaviour
     public string Name;
     public Vector2 StartPos;
     public Vector2 EndPos;
+    public Vector2 BobUp;
+    public Vector2 BobDown;
     public bool IsLetIn;
     public float Timer;
     public float Duration;
@@ -20,7 +22,7 @@ public class NPCScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        EndPos = new Vector2(-12f, 0.3f);
+        EndPos = new Vector2(-15f, 0.7f);
         IsLetIn = false; 
         int RandomNumberGen = Random.Range(1, 10);
         GameManager = GameObject.Find("GameManager");
@@ -69,7 +71,15 @@ public class NPCScript : MonoBehaviour
             if (Timer < Duration)
             {
                 float t = Timer / Duration;
-                transform.position = Vector2.Lerp(StartPos, EndPos, t);
+                Vector2 XLerp = Vector2.Lerp(StartPos, EndPos, t);
+                Vector2 YLerp = Vector2.Lerp(StartPos, EndPos, t);
+                if (transform.position.y < BobUp.y)
+                { 
+                
+                    
+                }
+                transform.position = new Vector2(XLerp.x, YLerp.y);
+                //transform.position = Vector2.Lerp(StartPos, EndPos, t);
                 Timer += Time.deltaTime;
 
             }
