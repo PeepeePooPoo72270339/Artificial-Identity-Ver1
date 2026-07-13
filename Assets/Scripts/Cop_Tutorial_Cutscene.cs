@@ -27,23 +27,20 @@ public class Cop_Tutorial_Cutscene : MonoBehaviour
     {
         int CurrentLine = DisplayedDialogue.GetComponent<NPCText>().Text_Line;
         if (CurrentLine == DialogueLength - 1)
-        {
-            
-            print("End");
-            LetSelfIn.GetComponent<LetPersonInScript>().LetNPCIn();
-        
+        {          
+            if (DisplayedDialogue.GetComponent<NPCText>().ParseText.triggered)
+            {
+                EndTutorial();
+
+            }
         }
-        if (DisplayedDialogue.GetComponent<NPCText>().ParseText.triggered)
-        {
-            EndTutorial();
-        
-        }
+
         
     }
     public void EndTutorial()
     {
         print("EnterPressed");
-    
-    
+        LetSelfIn.GetComponent<LetPersonInScript>().LetNPCIn();
+        GameManager.GetComponent<GameManagerScript>().IsTutorialOver = true;
     }
 }

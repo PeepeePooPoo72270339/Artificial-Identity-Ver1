@@ -555,8 +555,8 @@ MonoBehaviour:
   ListLength: 4
   npcIDs:
   - {fileID: 6754492838124244336, guid: 1f4b6916bc7922d49be1b22341a590ea, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7378174453572353699, guid: ae9152d3e00d83c4a8df33decb602163, type: 3}
+  - {fileID: 605414864805541577, guid: aad9947cb1767e349911488dbd9efe3e, type: 3}
 --- !u!1 &221937024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751081893}
   - component: {fileID: 751081892}
+  - component: {fileID: 751081894}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -1679,6 +1680,7 @@ MonoBehaviour:
   SpawnerObject: {fileID: 1561391546}
   Middle: {fileID: 498446974}
   NPCSList: {fileID: 2121651734}
+  IsTutorialOver: 0
 --- !u!4 &751081893
 Transform:
   m_ObjectHideFlags: 0
@@ -1699,6 +1701,20 @@ Transform:
   - {fileID: 1668333632}
   m_Father: {fileID: 1732929227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751081894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751081891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6eab724588a123488780ebd5a3c4f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnOldWoman
+  StartingNPCs:
+  - {fileID: 3259951263311749282, guid: c80eec65e68162f4f8f8e6bbd07af799, type: 3}
 --- !u!1 &780606204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +1902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802931344}
   - component: {fileID: 802931345}
+  - component: {fileID: 802931346}
   m_Layer: 0
   m_Name: BusStop
   m_TagString: Untagged
@@ -1967,6 +1984,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &802931346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802931343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fce3451dacb33e41a0fecf075904d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NonInteractableMapPart
 --- !u!1 &852278692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,7 +2851,7 @@ Transform:
   m_GameObject: {fileID: 1516039966}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 14.14, y: -14.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3192,7 +3221,7 @@ MonoBehaviour:
   ListLength: 2
   npcIDs:
   - {fileID: 4359938689838029716, guid: 2bd3736887488d64ba823d51b5568205, type: 3}
-  - {fileID: 0}
+  - {fileID: 5846439224101500380, guid: b07f97830aae02c479ad9ba2fcf1ff1f, type: 3}
 --- !u!1 &1692767787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,7 +3269,7 @@ MonoBehaviour:
   Day_Number: 1
   ListLength: 3
   npcIDs:
-  - {fileID: 5846439224101500380, guid: b07f97830aae02c479ad9ba2fcf1ff1f, type: 3}
+  - {fileID: 833549533322186497, guid: 4bc58c2f8107f7e498ed06bc2da57468, type: 3}
   - {fileID: 6032738659626064431, guid: a6dd81969bda6244e8c3abc40899dfa9, type: 3}
   - {fileID: 1759155945799403161, guid: 7d6a94d68eb7f29428bb894af44d52d8, type: 3}
 --- !u!1 &1719565386
@@ -4232,7 +4261,7 @@ Transform:
   m_GameObject: {fileID: 1963053419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7813587, y: -1.97668, z: 0}
+  m_LocalPosition: {x: 14.66, y: 12.33, z: 0}
   m_LocalScale: {x: 2.8385, y: 2.8385, z: 2.8385}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4381,6 +4410,7 @@ MonoBehaviour:
       m_Action: Mouse Click
       m_Flags: 0
     m_Flags: 0
+  GameManager: {fileID: 751081892}
   ButtonLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4525,7 +4555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: CamPos.Array.data[1].x
-      value: 20
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
+      propertyPath: CamPos.Array.data[1].y
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5977695023461769596, guid: 73215d55290400e45ae20c035d2b96ae, type: 3}
       propertyPath: CamPos.Array.data[2].x

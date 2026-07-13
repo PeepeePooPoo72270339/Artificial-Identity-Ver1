@@ -8,6 +8,7 @@ public class GunScript : MonoBehaviour
     public GameObject ShellsOutline;
     public GameObject Outline;
     public InputAction MouseClick;
+    public GameManagerScript GameManager;
     public LayerMask ButtonLayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +25,7 @@ public class GunScript : MonoBehaviour
 
         if (Physics.Raycast(mouseray, out RaycastHit hit, Mathf.Infinity, ButtonLayer))
         {
-            if (hit.collider.gameObject == Self)
+            if (hit.collider.gameObject == Self && GameManager.IsTutorialOver == true)
             {
                 Outline.GetComponent<SpriteRenderer>().enabled = true;
                 ShellsOutline.GetComponent<SpriteRenderer>().enabled = true;

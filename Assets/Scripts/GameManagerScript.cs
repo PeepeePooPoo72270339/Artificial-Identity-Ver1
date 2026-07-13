@@ -34,6 +34,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject SpawnerObject;
     public GameObject Middle;
     public GameObject NPCSList;
+    public bool IsTutorialOver;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,13 +50,12 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         OpenMap.performed += ctx => ShowMap();
+        NPCTownPOS();
         if (Timer < Duration && NPCSEntering.Count > 0)
         {
             float t = Timer / Duration;
             NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, MidPos, t);
             Timer += Time.deltaTime;
-
-
         }
         CurrentDay = DaysToGrab[Day];
     }
@@ -143,7 +143,17 @@ public class GameManagerScript : MonoBehaviour
         }
 
         yield return null;
-
+    }
+    public void NPCTownPOS()
+    {
+        for (int i = 0; i < NPCSInTown.Count; i++)
+        {
+            NPCSInTown[i].transform.position = new Vector2(0f, 0f);
+        
+        
+        }
+    
+    
     }
 
 
