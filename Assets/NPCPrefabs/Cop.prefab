@@ -141,3 +141,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9d77a9f62da0043a55d2ed915124e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cop_Tutorial_Cutscene
+  IsTutorialOver: 0
+  TutorialChar: {fileID: 0}
+  DisplayedDialogue: {fileID: 0}
+  ParseLines:
+    m_Name: Parse Lines
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: dc1a4fae-3d70-41be-b569-1e4f5c554f1c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d865a800-9ab6-4f62-b2dd-260ade596e1a
+      m_Path: <Keyboard>/enter
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Parse Lines
+      m_Flags: 0
+    m_Flags: 0
+  GameManager: {fileID: 0}
+  LetSelfIn: {fileID: 0}
+  DialogueLength: 0

@@ -16,7 +16,8 @@ public class StartGame : MonoBehaviour
     }
     public void StartTheGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("OpeningCutscene");
     
     
     }
