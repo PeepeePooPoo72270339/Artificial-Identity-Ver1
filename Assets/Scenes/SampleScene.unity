@@ -1715,6 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnOldWoman
   StartingNPCs:
   - {fileID: 3259951263311749282, guid: c80eec65e68162f4f8f8e6bbd07af799, type: 3}
+  GameManager: {fileID: 0}
 --- !u!1 &780606204
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,8 @@ public class NPCScript : MonoBehaviour
         EndPos = new Vector2(-15f, 0.7f);
         IsLetIn = false; 
         int RandomNumberGen = Random.Range(1, 10);
+        BobUp = new Vector2(0, 0.8f);
+        BobDown = new Vector2(0, -1.2f);
         GameManager = GameObject.Find("GameManager");
         if (RandomNumberGen > 6)
         {
@@ -72,13 +74,9 @@ public class NPCScript : MonoBehaviour
             {
                 float t = Timer / Duration;
                 Vector2 XLerp = Vector2.Lerp(StartPos, EndPos, t);
-                Vector2 YLerp = Vector2.Lerp(StartPos, EndPos, t);
-                if (transform.position.y < BobUp.y)
-                { 
-                
-                    
-                }
+                Vector2 YLerp = Vector2.Lerp(BobDown, BobUp, Mathf.PingPong(Time.time * 0.8f, 0.2f));
                 transform.position = new Vector2(XLerp.x, YLerp.y);
+
                 //transform.position = Vector2.Lerp(StartPos, EndPos, t);
                 Timer += Time.deltaTime;
 
