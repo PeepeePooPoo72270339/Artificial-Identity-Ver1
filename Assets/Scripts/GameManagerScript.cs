@@ -2,45 +2,59 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class GameManagerScript : MonoBehaviour
 {
+    [Header ("Important Game Vars")]
     public int Day;
-    public float Timer;
-    public float Duration;
+    public int TimeOfDay;
+    public bool IsTutorialOver;
+
+    [Header ("Inputs")]
     public InputAction OpenMap;
     public InputAction ParseDialogue;
-    
+
+    [Header("NPC Instantiate ForDay")]
     public int PeopleEnteringToday;
     public int PeopleLeaving;
     public int PeopleEnteringMin;
     public int PeopleEnteringMax;
     public GameObject PeoplePrefab;
+
+    [Header("Other GameObjects")]
     public GameObject Map;
     public GameObject GameCamera;
     public GameObject UImanager;
     private bool DayOverBool;
     [SerializeField]
+
+    [Header("Non Randomized Spawn")]
     public List<GameObject> DaysToGrab;
     public GameObject CurrentDay;
+    public List<GameObject> TownPositions;
+    public List<Vector3> TownPosScale;
+
+    [Header("Spawned NPC Manager")]
     public List<GameObject> NPCSEntering;
     public List<GameObject> NPCSInTown;
     public List<GameObject> DeadNPCS;
     public List<GameObject> NonAINPCS;
-    //SpawnPos stuff
+
+    [Header("NPC Spawn and Lerp stuff")]
     public Vector2 SpawnPos;
     public Vector2 MidPos;
     private Quaternion Rotation;
     public GameObject SpawnerObject;
     public GameObject Middle;
+    public float Timer;
+    public float Duration;
     public GameObject NPCSList;
-    public bool IsTutorialOver;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SpawnPos = SpawnerObject.transform.position;
         MidPos = Middle.transform.position;
-        OpenMap.Enable();
         NewDay();
         DayOverBool = true;
         
@@ -57,7 +71,16 @@ public class GameManagerScript : MonoBehaviour
             NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, MidPos, t);
             Timer += Time.deltaTime;
         }
-        CurrentDay = DaysToGrab[Day];
+        if (NPCSEntering.Count <= 0 )
+        {
+            OpenMap.Enable();
+
+        }
+        else 
+        {
+            OpenMap.Disable();        
+        }
+            CurrentDay = DaysToGrab[Day];
     }
     
 
@@ -148,14 +171,14 @@ public class GameManagerScript : MonoBehaviour
     {
         for (int i = 0; i < NPCSInTown.Count; i++)
         {
-            NPCSInTown[i].transform.position = new Vector2(0f, 0f);
+            int NPCWantLocation = NPCSInTown[i].GetComponent<NPCScript>().TownPostioning;
+            Vector2 TownPositioning = TownPositions[NPCWantLocation].transform.position;
+            NPCSInTown[i].transform.position = TownPositioning;
         
         
         }
     
     
     }
-
-
 
 }
