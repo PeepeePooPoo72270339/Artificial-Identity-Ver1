@@ -71,15 +71,21 @@ public class GameManagerScript : MonoBehaviour
             NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, MidPos, t);
             Timer += Time.deltaTime;
         }
-        if (NPCSEntering.Count <= 0 )
+        if (NPCSEntering.Count <= 0 && TimeOfDay != 18)
         {
             OpenMap.Enable();
 
         }
         else 
         {
+            if (TimeOfDay == 18 && NPCSEntering.Count <= 0)
+            { 
+                Map.GetComponent<MapScript>().Warp(2);
+            
+            }
             OpenMap.Disable();        
         }
+        
             CurrentDay = DaysToGrab[Day];
     }
     
@@ -98,14 +104,19 @@ public class GameManagerScript : MonoBehaviour
         if (DayOverBool == true)
         {
             StartCoroutine(KillCheck());
-
+            TimeOfDay = 9;
             DayOverBool = false;
 
         }
         
         Day++;
-        PeopleEnteringToday = DaysToGrab[Day].GetComponent<NPCList>().npcIDs.Count;
-        NonRandomizedSpawn();
+        if (TimeOfDay == 18)
+        {
+            PeopleEnteringToday = DaysToGrab[Day].GetComponent<NPCList>().npcIDs.Count;
+            NonRandomizedSpawn();
+
+        }
+
         
         //PeopleEnteringToday = Random.Range(PeopleEnteringMin, PeopleEnteringMax);
         //SpawnPeople();

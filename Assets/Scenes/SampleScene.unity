@@ -1985,8 +1985,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManagerScript
   Day: -1
-  Timer: 0
-  Duration: 1.5
+  TimeOfDay: 18
+  IsTutorialOver: 0
   OpenMap:
     m_Name: Open Map
     m_Type: 0
@@ -2034,11 +2034,12 @@ MonoBehaviour:
   - {fileID: 1692767787}
   - {fileID: 172582282}
   - {fileID: 1668333631}
+  CurrentDay: {fileID: 480862866}
   TownPositions:
   - {fileID: 98734037}
   - {fileID: 617636820}
   - {fileID: 408772275}
-  CurrentDay: {fileID: 480862866}
+  TownPosScale: []
   NPCSEntering: []
   NPCSInTown: []
   DeadNPCS: []
@@ -2047,8 +2048,9 @@ MonoBehaviour:
   MidPos: {x: 0, y: 0}
   SpawnerObject: {fileID: 1561391546}
   Middle: {fileID: 498446974}
+  Timer: 0
+  Duration: 1.5
   NPCSList: {fileID: 2121651734}
-  IsTutorialOver: 0
 --- !u!4 &751081893
 Transform:
   m_ObjectHideFlags: 0
