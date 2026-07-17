@@ -19,6 +19,8 @@ public class NPCScript : MonoBehaviour
     public float Duration;
     public bool IsDead;
     public List<string> EnteringDialogue;
+    public List<string> Day1Dialogue;
+    public List<string> Day2Dialogue;
     public int TownPostioning;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
