@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: MouseClick.m_Name
+      value: Mouse Click
+      objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.381045
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Name
-      value: BasicGuy Variant
+      value: Musician
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

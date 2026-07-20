@@ -1339,8 +1339,8 @@ MonoBehaviour:
   ListLength: 2
   npcIDs:
   - {fileID: 9021944843228416354, guid: daa85e05a5e4e994b9889c385d6fdb44, type: 3}
+  - {fileID: 5846439224101500380, guid: b07f97830aae02c479ad9ba2fcf1ff1f, type: 3}
   - {fileID: 522113001553786102, guid: fd0e95a3574c16644a2cb09d6fd865d7, type: 3}
-  - {fileID: 7642470731044778417, guid: f52825c89a10e494db289552d972c7db, type: 3}
 --- !u!1 &482866492
 GameObject:
   m_ObjectHideFlags: 0

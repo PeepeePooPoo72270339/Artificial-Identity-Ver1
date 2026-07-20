@@ -199,6 +199,10 @@ PrefabInstance:
       value: Mathhew
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: MouseClick.m_Name
+      value: Mouse Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: Day1Dialogue.Array.size
       value: 10
       objectReference: {fileID: 0}

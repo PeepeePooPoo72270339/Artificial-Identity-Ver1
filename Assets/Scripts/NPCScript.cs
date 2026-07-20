@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System.Collections;
+using static UnityEditor.FilePathAttribute;
 
 
 public class NPCScript : MonoBehaviour
@@ -22,6 +23,7 @@ public class NPCScript : MonoBehaviour
     public List<string> Day1Dialogue;
     public List<string> Day2Dialogue;
     public int TownPostioning;
+    public InputAction MouseClick;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +32,7 @@ public class NPCScript : MonoBehaviour
         int RandomNumberGen = Random.Range(1, 10);
         BobUp = new Vector2(0, 0.56f);
         BobDown = new Vector2(0, -1.2f);
+        MouseClick.Enable();
         GameManager = GameObject.Find("GameManager");
         if (RandomNumberGen > 6)
         {
@@ -65,6 +68,11 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.GetComponent<GameManagerScript>().TimeOfDay != 18)
+        {
+            CheckIfCursorOver();
+        }
+        
         if (IsLetIn == false)
         {
             StartPos = transform.position;
@@ -82,7 +90,21 @@ public class NPCScript : MonoBehaviour
 
                 //transform.position = Vector2.Lerp(StartPos, EndPos, t);
                 Timer += Time.deltaTime;
-
+            }
+        }
+    }
+    public void CheckIfCursorOver()
+    {
+        Vector3 mousepos = Mouse.current.position.ReadValue();
+        Ray mouseRay = Camera.main.ScreenPointToRay(mousepos);
+        if (Physics.Raycast(mouseRay, out RaycastHit hit))
+        {
+            if (hit.collider.gameObject == gameObject)
+            {
+                if (MouseClick.WasPressedThisFrame())
+                {
+                    print("Mouse is over " + gameObject.name);
+                }                
             }
         }
 

@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: MouseClick.m_Name
+      value: Mouse Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: EnteringDialogue.Array.size
       value: 3
       objectReference: {fileID: 0}

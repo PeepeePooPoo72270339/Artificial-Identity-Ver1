@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3780991611323433160}
   - component: {fileID: 5244105016526377020}
   - component: {fileID: 1176052760742695683}
+  - component: {fileID: -8189098222422792515}
+  - component: {fileID: 8385379928133054302}
   m_Layer: 0
   m_Name: BasicGuy
   m_TagString: NPC
@@ -110,6 +112,8 @@ MonoBehaviour:
   Name: 
   StartPos: {x: 0, y: 0}
   EndPos: {x: -100, y: 0}
+  BobUp: {x: 0, y: 0}
+  BobDown: {x: 0, y: 0}
   IsLetIn: 0
   Timer: 0
   Duration: 2
@@ -118,3 +122,65 @@ MonoBehaviour:
   - Hello
   - This Is a
   - Test Dialogue
+  Day1Dialogue: []
+  Day2Dialogue: []
+  TownPostioning: 0
+  MouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1ee94723-8379-4725-a075-02f5487a3b91
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+--- !u!54 &-8189098222422792515
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463319388224016080}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &8385379928133054302
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463319388224016080}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

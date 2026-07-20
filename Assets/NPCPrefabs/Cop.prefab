@@ -17,6 +17,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: MouseClick.m_Name
+      value: Mouse Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: Day1Dialogue.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -151,6 +155,18 @@ PrefabInstance:
     - target: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Name
       value: Cop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385379928133054302, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Height
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385379928133054302, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Radius
+      value: 3.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385379928133054302, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Center.x
+      value: 0.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
