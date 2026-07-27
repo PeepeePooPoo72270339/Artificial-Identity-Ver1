@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: MouseClick.m_Name
       value: Mouse Click
       objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: SelfSpriteRenderer
+      value: 
+      objectReference: {fileID: 4344059810582543950}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: FakeSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.203951
@@ -73,3 +81,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+--- !u!212 &4344059810582543950 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+  m_PrefabInstance: {fileID: 8399212049409027698}
+  m_PrefabAsset: {fileID: 0}

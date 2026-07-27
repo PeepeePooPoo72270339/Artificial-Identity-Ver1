@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LetPersonInScript : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject NewNPCToAdd;
     public GameObject NPCTXT;
+    public GameObject MidPoint;
+    public Button LetInButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,12 +19,27 @@ public class LetPersonInScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
         {
             NewNPCToAdd = GameManager.GetComponent<GameManagerScript>().NPCSEntering[0];
-
+            
+        }
+        float NPCxPos = NewNPCToAdd.transform.position.x;      
+        float MidPointXpos = MidPoint.transform.position.x;
+        int NPCRounded = Mathf.FloorToInt(NPCxPos);
+        int MidPointRounded = Mathf.FloorToInt(MidPointXpos);
+        bool IsActive = NPCRounded == MidPointXpos;
+        if (IsActive == true)
+        {
+            LetInButton.interactable = true;
+        }
+        else
+        {
+            LetInButton.interactable = false;
         }
         return;
+        
         
 
     }

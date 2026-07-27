@@ -9,6 +9,9 @@ public class NPCScript : MonoBehaviour
 {
     public GameObject SpawnPoint;
     public GameObject GameManager;
+    public List<Sprite> FakeSprites;
+    public Sprite RealSprite;
+    public SpriteRenderer SelfSpriteRenderer;
     public bool IsAI;
     public string Name;
     public Vector2 StartPos;
@@ -45,6 +48,19 @@ public class NPCScript : MonoBehaviour
         
         }
         print(IsAI);
+        //Set sprite for real and fake
+        if (IsAI == true)
+        {
+           int RandomNumberMax = FakeSprites.Count;
+           int FakeSpriteID = Random.Range(0, RandomNumberMax -1);
+           SelfSpriteRenderer.sprite = FakeSprites[FakeSpriteID];
+           
+           
+        }
+        else
+        { 
+        
+        }
         
         
     }

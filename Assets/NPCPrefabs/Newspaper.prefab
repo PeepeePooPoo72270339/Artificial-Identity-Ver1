@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: MouseClick.m_Name
       value: Mouse Click
       objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: SelfSpriteRenderer
+      value: 
+      objectReference: {fileID: 8897738080155643741}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: FakeSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'FakeSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6679295004401939170, guid: b3b85f372fc2b374e86d0d4214aadf29, type: 3}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.996184
@@ -52,6 +64,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Size.x
+      value: 7.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Size.y
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7898161838574117372, guid: f17957ecc9a4d0f448b3e27b9bf20d22, type: 3}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Name
       value: Newspaper
@@ -61,3 +89,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+--- !u!212 &8897738080155643741 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+  m_PrefabInstance: {fileID: 3728364894450532193}
+  m_PrefabAsset: {fileID: 0}

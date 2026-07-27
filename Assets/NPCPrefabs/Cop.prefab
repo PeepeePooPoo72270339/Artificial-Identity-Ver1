@@ -13,12 +13,24 @@ PrefabInstance:
       value: Darrell
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: RealSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3b7bcc2273499045a69543cb870c6ea, type: 3}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: TownPostioning
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: MouseClick.m_Name
       value: Mouse Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: SelfSpriteRenderer
+      value: 
+      objectReference: {fileID: 7800511700084905870}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: FakeSprites.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: Day1Dialogue.Array.size
@@ -176,6 +188,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -4584826253493031568}
   m_SourcePrefab: {fileID: 100100000, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+--- !u!212 &7800511700084905870 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+  m_PrefabInstance: {fileID: 2631845688240031666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9021944843228416354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}

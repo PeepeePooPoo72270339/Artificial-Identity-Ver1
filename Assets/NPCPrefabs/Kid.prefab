@@ -13,6 +13,14 @@ PrefabInstance:
       value: Mouse Click
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: SelfSpriteRenderer
+      value: 
+      objectReference: {fileID: 656777895069948021}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: FakeSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: EnteringDialogue.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -68,6 +76,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7119072624119840826, guid: fdd13fac8113b5745b1915e5c33653c7, type: 3}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Name
       value: Kid
@@ -77,3 +93,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+--- !u!212 &656777895069948021 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+  m_PrefabInstance: {fileID: 4745551277404915785}
+  m_PrefabAsset: {fileID: 0}
