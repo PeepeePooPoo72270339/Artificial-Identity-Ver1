@@ -16,6 +16,7 @@ public class Cop_Tutorial_Cutscene : MonoBehaviour
         //TutorialChar = GameObject.Find("Cop");
         TutorialChar = this.gameObject;
         DialogueLength = TutorialChar.GetComponent<NPCScript>().EnteringDialogue.Count;
+        TutorialChar.GetComponent<NPCScript>().IsAI = false;
         DisplayedDialogue = GameObject.FindGameObjectWithTag("DialogueBox");
         LetSelfIn = GameObject.Find("Let_In");
         GameManager = GameObject.FindGameObjectWithTag("GameManager");
