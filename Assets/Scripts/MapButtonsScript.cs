@@ -29,7 +29,7 @@ public class MapButtonsScript : MonoBehaviour
         Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
         if (Physics.Raycast(mouseRay, out RaycastHit hit, Mathf.Infinity, ButtonLayer))
         {
-            if ( hit.collider.gameObject == Self)
+            if ( hit.collider.gameObject == Self && MapParent.GetComponent<MapScript>().IsMapOpen == true)
             {
                 Vector3 ExpandScale = ExpandSize;
                 Self.transform.localScale = ExpandScale;

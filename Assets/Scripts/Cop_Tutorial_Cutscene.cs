@@ -16,7 +16,6 @@ public class Cop_Tutorial_Cutscene : MonoBehaviour
         //TutorialChar = GameObject.Find("Cop");
         TutorialChar = this.gameObject;
         DialogueLength = TutorialChar.GetComponent<NPCScript>().EnteringDialogue.Count;
-        TutorialChar.GetComponent<NPCScript>().IsAI = false;
         DisplayedDialogue = GameObject.FindGameObjectWithTag("DialogueBox");
         LetSelfIn = GameObject.Find("Let_In");
         GameManager = GameObject.FindGameObjectWithTag("GameManager");
@@ -26,6 +25,7 @@ public class Cop_Tutorial_Cutscene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TutorialChar.GetComponent<NPCScript>().IsAI = false;
         int CurrentLine = DisplayedDialogue.GetComponent<NPCText>().Text_Line;
         if (CurrentLine == DialogueLength - 1)
         {          

@@ -5,14 +5,28 @@ public class BedScript : MonoBehaviour
 {
     public GameObject Self;
     public GameObject GameManager;
+    public GameObject PlayerCamera;
+    public bool IsDemo;
     public InputAction GoToBed;
     public Vector2 SelfPos;
     public LayerMask ButtonLayer;
+    public GameObject BotCounter;
+    public GameObject HumanCounter;
+    // victory screen pos is 73 x
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        IsDemo = true;
         GoToBed.Enable();
         
+    }
+    public void VictoryScreenDemo()
+    {
+        Vector2 CamPos = new Vector2(73, 0);
+        PlayerCamera.transform.position = new Vector3(CamPos.x, CamPos.y, PlayerCamera.transform.position.z);
+        BotCounter.GetComponent<BotVictoryScreenCounter>().AICounter();
+        HumanCounter.GetComponent<HumanVictorySreenCounter>().HumanCounter();
+    
     }
 
     // Update is called once per frame
@@ -28,16 +42,15 @@ public class BedScript : MonoBehaviour
                 {
                     print("Sleep");
                     GameManager.GetComponent<GameManagerScript>().NewDay();
+                    VictoryScreenDemo();
                 }
                 else
                 {
                     print("People are trying to enter");                
-                }
-            
+                }           
             
             }
-        
-        
+              
         }
 
     }

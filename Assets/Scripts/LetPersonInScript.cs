@@ -23,9 +23,14 @@ public class LetPersonInScript : MonoBehaviour
         if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count > 0)
         {
             NewNPCToAdd = GameManager.GetComponent<GameManagerScript>().NPCSEntering[0];
+            NPCMidpointStuff();
             
         }
-        float NPCxPos = NewNPCToAdd.transform.position.x;      
+              
+    }
+    public void NPCMidpointStuff()
+    {
+        float NPCxPos = NewNPCToAdd.transform.position.x;
         float MidPointXpos = MidPoint.transform.position.x;
         int NPCRounded = Mathf.FloorToInt(NPCxPos);
         int MidPointRounded = Mathf.FloorToInt(MidPointXpos);
@@ -39,8 +44,6 @@ public class LetPersonInScript : MonoBehaviour
             LetInButton.interactable = false;
         }
         return;
-        
-        
 
     }
 
@@ -68,9 +71,7 @@ public class LetPersonInScript : MonoBehaviour
         {
             yield return new WaitForSeconds(1.5f);
             GameManager.GetComponent<GameManagerScript>().Timer = 0;
-
-        }
-
+        }    
 
 
     }
