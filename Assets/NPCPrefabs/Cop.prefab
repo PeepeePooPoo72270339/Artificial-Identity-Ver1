@@ -13,6 +13,10 @@ PrefabInstance:
       value: Darrell
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: YOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: RealSprite
       value: 
       objectReference: {fileID: 21300000, guid: a3b7bcc2273499045a69543cb870c6ea, type: 3}
@@ -40,6 +44,10 @@ PrefabInstance:
       propertyPath: Day2Dialogue.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'FakeSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: a3b7bcc2273499045a69543cb870c6ea, type: 3}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: 'Day1Dialogue.Array.data[0]'
       value: If you need any help
@@ -158,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a3b7bcc2273499045a69543cb870c6ea, type: 3}
     - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_SpriteSortPoint

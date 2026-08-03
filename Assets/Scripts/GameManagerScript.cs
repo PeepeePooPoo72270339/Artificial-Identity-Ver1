@@ -68,7 +68,8 @@ public class GameManagerScript : MonoBehaviour
         if (Timer < Duration && NPCSEntering.Count > 0)
         {
             float t = Timer / Duration;
-            NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, MidPos, t);
+            Vector2 NewPos = new Vector2(MidPos.x, NPCSEntering[0].GetComponent<NPCScript>().transform.position.y);
+            NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, NewPos, t);
             Timer += Time.deltaTime;
         }
         if (NPCSEntering.Count <= 0 && TimeOfDay != 18)
@@ -128,8 +129,13 @@ public class GameManagerScript : MonoBehaviour
         for (int i = 0; i < PeopleEnteringToday; i++)
         {
             int NPCID = i;
+            //Vector3 NewSpawnPos = new Vector3(SpawnPos.x, SpawnPos.y - 1.2f, 0);
+            
             GameObject Person = DaysToGrab[Day].GetComponent<NPCList>().npcIDs[i];
-            Instantiate(Person, SpawnPos, Rotation);
+            float NewY = Person.GetComponent<NPCScript>().transform.position.y;
+            Vector3 NewSpawnPos = new Vector3(SpawnPos.x, NewY, 0);
+            Instantiate(Person, NewSpawnPos, Rotation);
+            print("Spawned " + Person.name + " at " + Person.transform.position);
 
         }
         for (int i = 0; i < PeopleEnteringToday; i++)

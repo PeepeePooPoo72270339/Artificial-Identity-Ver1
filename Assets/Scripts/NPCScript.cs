@@ -6,8 +6,9 @@ using System.Collections;
 
 public class NPCScript : MonoBehaviour
 {
+    public float YOffset;
     public GameObject SpawnPoint;
-    public GameObject GameManager;
+    public GameObject GameManager;    
     public List<Sprite> FakeSprites;
     public Sprite RealSprite;
     public SpriteRenderer SelfSpriteRenderer;
@@ -17,6 +18,7 @@ public class NPCScript : MonoBehaviour
     public Vector2 EndPos;
     public Vector2 BobUp;
     public Vector2 BobDown;
+    public Vector3 MainPos;
     public bool IsLetIn;
     public float Timer;
     public float Duration;
@@ -27,13 +29,16 @@ public class NPCScript : MonoBehaviour
     public int TownPostioning;
     public InputAction MouseClick;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        MainPos = transform.position;
+        StartCoroutine(Delay());       
+    }
     void Start()
     {
         EndPos = new Vector2(-15f, 0.7f);
         IsLetIn = false; 
         int RandomNumberGen = Random.Range(1, 10);
-        BobUp = new Vector2(0, 0.56f);
-        BobDown = new Vector2(0, -1.2f);
         MouseClick.Enable();
         GameManager = GameObject.Find("GameManager");
         if (RandomNumberGen > 6)
@@ -100,7 +105,7 @@ public class NPCScript : MonoBehaviour
             {
                 float t = Timer / Duration;
                 Vector2 XLerp = Vector2.Lerp(StartPos, EndPos, t);
-                Vector2 YLerp = Vector2.Lerp(BobDown, BobUp, Mathf.PingPong(Time.time * 0.45f, 0.2f));
+                Vector2 YLerp = Vector2.Lerp(BobDown, BobUp, Mathf.PingPong(Time.time * 0.35f, 0.2f));
                 transform.position = new Vector2(XLerp.x, YLerp.y);
 
                 //transform.position = Vector2.Lerp(StartPos, EndPos, t);
@@ -123,5 +128,12 @@ public class NPCScript : MonoBehaviour
             }
         }
 
+    }
+    public IEnumerator Delay()
+    {       
+        yield return new WaitForSeconds(0.1f);
+        
+        BobUp = new Vector2(0, MainPos.y + 0.56f);
+        BobDown = new Vector2(0, MainPos.y - 1.2f);
     }
 }
