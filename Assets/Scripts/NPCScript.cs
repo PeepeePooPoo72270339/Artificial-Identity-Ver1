@@ -31,7 +31,6 @@ public class NPCScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        MainPos = transform.position;
         StartCoroutine(Delay());       
     }
     void Start()
@@ -88,6 +87,7 @@ public class NPCScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (GameManager.GetComponent<GameManagerScript>().TimeOfDay != 18)
         {
             CheckIfCursorOver();
@@ -96,7 +96,7 @@ public class NPCScript : MonoBehaviour
         if (IsLetIn == false)
         {
             StartPos = transform.position;
-
+            MainPos = transform.position;
         }
 
         if (IsLetIn == true)
@@ -105,7 +105,8 @@ public class NPCScript : MonoBehaviour
             {
                 float t = Timer / Duration;
                 Vector2 XLerp = Vector2.Lerp(StartPos, EndPos, t);
-                Vector2 YLerp = Vector2.Lerp(BobDown, BobUp, Mathf.PingPong(Time.time * 0.35f, 0.2f));
+                Vector2 Ylerper = new Vector2(MainPos.x, MainPos.y -3);
+                Vector2 YLerp = Vector2.Lerp(MainPos, Ylerper, Mathf.PingPong(Time.time * 0.35f, 0.2f));
                 transform.position = new Vector2(XLerp.x, YLerp.y);
 
                 //transform.position = Vector2.Lerp(StartPos, EndPos, t);
