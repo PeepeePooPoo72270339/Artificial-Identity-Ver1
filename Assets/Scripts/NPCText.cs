@@ -10,6 +10,7 @@ public class NPCText : MonoBehaviour
     public TMP_Text Dialogue;
     public int Text_Line;
     public InputAction ParseText;
+    public AudioSource EnterSFX; //Source: https://pixabay.com/sound-effects/film-special-effects-button-click-vintage-sound-fx-541135/
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +33,7 @@ public class NPCText : MonoBehaviour
             Dialogue.text = "";
         }
         ParseText.performed += ctx => ParseLine();
-
+        ParseText.performed += ctx => EnterSFX.Play();
 
     }
     public void ParseLine()

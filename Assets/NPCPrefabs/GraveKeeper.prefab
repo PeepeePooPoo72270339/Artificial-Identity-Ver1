@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4134146125076026615, guid: b8654050ee25fb1419cd8bec6fe2812b, type: 3}
+    - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463319388224016080, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Name
       value: GraveKeeper
