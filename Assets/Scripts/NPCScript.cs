@@ -6,7 +6,8 @@ using System.Collections;
 
 public class NPCScript : MonoBehaviour
 {
-    public float YOffset;
+    public Vector2 StartSpawnPos;
+    public float YSpawnOffset;
     public GameObject SpawnPoint;
     public GameObject GameManager;    
     public List<Sprite> FakeSprites;
@@ -31,7 +32,7 @@ public class NPCScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        StartCoroutine(Delay());       
+              
     }
     void Start()
     {
@@ -64,8 +65,9 @@ public class NPCScript : MonoBehaviour
         { 
         
         }
-        
-        
+        StartCoroutine(Delay());
+
+
     }
 
     public void AIKill()
@@ -105,7 +107,7 @@ public class NPCScript : MonoBehaviour
             {
                 float t = Timer / Duration;
                 Vector2 XLerp = Vector2.Lerp(StartPos, EndPos, t);
-                Vector2 Ylerper = new Vector2(MainPos.x, MainPos.y -3);
+                Vector2 Ylerper = new Vector2(MainPos.y, MainPos.y -3);
                 Vector2 YLerp = Vector2.Lerp(MainPos, Ylerper, Mathf.PingPong(Time.time * 0.35f, 0.2f));
                 transform.position = new Vector2(XLerp.x, YLerp.y);
 
@@ -132,7 +134,7 @@ public class NPCScript : MonoBehaviour
     }
     public IEnumerator Delay()
     {       
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         
         BobUp = new Vector2(0, MainPos.y + 0.56f);
         BobDown = new Vector2(0, MainPos.y - 1.2f);

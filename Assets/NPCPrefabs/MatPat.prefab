@@ -199,6 +199,22 @@ PrefabInstance:
       value: Mathhew
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: YOffset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: YSpawnOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: StartSpawnPos.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: StartSpawnPos.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: MouseClick.m_Name
       value: Mouse Click
       objectReference: {fileID: 0}
@@ -221,7 +237,7 @@ PrefabInstance:
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: 'FakeSprites.Array.data[0]'
       value: 
-      objectReference: {fileID: -1427982800443335547, guid: 54bdef151f2ff4a4888b35b71cd401e2, type: 3}
+      objectReference: {fileID: 21300000, guid: 54bdef151f2ff4a4888b35b71cd401e2, type: 3}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: 'Day1Dialogue.Array.data[0]'
       value: Hey... Have you ever heard of the uncanny valley theory?
@@ -306,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.z

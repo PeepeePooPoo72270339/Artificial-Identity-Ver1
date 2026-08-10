@@ -63,13 +63,14 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         OpenMap.performed += ctx => ShowMap();
         NPCTownPOS();
         if (Timer < Duration && NPCSEntering.Count > 0)
         {
             float t = Timer / Duration;
             Vector2 NewPos = new Vector2(MidPos.x, NPCSEntering[0].GetComponent<NPCScript>().transform.position.y);
-            NPCSEntering[0].transform.position = Vector2.Lerp(SpawnPos, NewPos, t);
+            NPCSEntering[0].transform.position = Vector2.Lerp(NPCSEntering[0].GetComponent<NPCScript>().StartSpawnPos, NewPos, t);
             Timer += Time.deltaTime;
         }
         if (NPCSEntering.Count <= 0 && TimeOfDay != 18)
@@ -104,7 +105,7 @@ public class GameManagerScript : MonoBehaviour
     {
         if (DayOverBool == true)
         {
-            StartCoroutine(KillCheck());
+            //StartCoroutine(KillCheck());
             TimeOfDay = 9;
             DayOverBool = false;
 
@@ -132,7 +133,8 @@ public class GameManagerScript : MonoBehaviour
             //Vector3 NewSpawnPos = new Vector3(SpawnPos.x, SpawnPos.y - 1.2f, 0);
             
             GameObject Person = DaysToGrab[Day].GetComponent<NPCList>().npcIDs[i];
-            float NewY = Person.GetComponent<NPCScript>().transform.position.y;
+            //SpawnerObject.transform.position = new Vector3(8.59f, -0.56f + Person.GetComponent<NPCScript>().YSpawnOffset, 0);
+            float NewY = Person.GetComponent<NPCScript>().YSpawnOffset;
             Vector3 NewSpawnPos = new Vector3(SpawnPos.x, NewY, 0);
             Instantiate(Person, NewSpawnPos, Rotation);
             print("Spawned " + Person.name + " at " + Person.transform.position);
@@ -178,7 +180,6 @@ public class GameManagerScript : MonoBehaviour
             if (i == NPCSInTown.Count - 1)
             {
                 DayOverBool = true;
-            
             }
         }
 
@@ -190,12 +191,8 @@ public class GameManagerScript : MonoBehaviour
         {
             int NPCWantLocation = NPCSInTown[i].GetComponent<NPCScript>().TownPostioning;
             Vector2 TownPositioning = TownPositions[NPCWantLocation].transform.position;
-            NPCSInTown[i].transform.position = TownPositioning;
-        
-        
-        }
-    
-    
+            NPCSInTown[i].transform.position = TownPositioning;             
+        }       
     }
 
 }

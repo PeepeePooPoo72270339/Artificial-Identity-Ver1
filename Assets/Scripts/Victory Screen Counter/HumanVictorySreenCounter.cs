@@ -6,7 +6,7 @@ public class HumanVictorySreenCounter : MonoBehaviour
     public GameObject GameManager;
     public List<GameObject> NPCSList;
     public TMPro.TextMeshPro HumanCounterText;
-    private int HumanCount;
+    public int HumanCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

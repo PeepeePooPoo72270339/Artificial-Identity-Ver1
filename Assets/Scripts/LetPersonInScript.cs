@@ -35,7 +35,7 @@ public class LetPersonInScript : MonoBehaviour
         int NPCRounded = Mathf.FloorToInt(NPCxPos);
         int MidPointRounded = Mathf.FloorToInt(MidPointXpos);
         bool IsActive = NPCRounded == MidPointXpos;
-        if (IsActive == true)
+        if (IsActive == true && GameManager.GetComponent<GameManagerScript>().IsTutorialOver == true)
         {
             LetInButton.interactable = true;
         }
@@ -69,7 +69,7 @@ public class LetPersonInScript : MonoBehaviour
 
         IEnumerator Delay()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
             GameManager.GetComponent<GameManagerScript>().Timer = 0;
         }    
 

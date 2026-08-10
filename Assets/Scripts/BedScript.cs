@@ -22,7 +22,7 @@ public class BedScript : MonoBehaviour
     }
     public void VictoryScreenDemo()
     {
-        Vector2 CamPos = new Vector2(73, 0);
+        Vector2 CamPos = new Vector2(74, 0);
         PlayerCamera.transform.position = new Vector3(CamPos.x, CamPos.y, PlayerCamera.transform.position.z);
         BotCounter.GetComponent<BotVictoryScreenCounter>().AICounter();
         HumanCounter.GetComponent<HumanVictorySreenCounter>().HumanCounter();
@@ -41,7 +41,7 @@ public class BedScript : MonoBehaviour
                 if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count == 0)
                 {
                     print("Sleep");
-                    GameManager.GetComponent<GameManagerScript>().NewDay();
+                    //GameManager.GetComponent<GameManagerScript>().NewDay();
                     VictoryScreenDemo();
                 }
                 else

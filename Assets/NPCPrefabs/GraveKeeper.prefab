@@ -21,6 +21,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4134146125076026615, guid: b8654050ee25fb1419cd8bec6fe2812b, type: 3}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: StartSpawnPos.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: StartSpawnPos.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: MouseClick.m_Name
       value: Mouse Click
       objectReference: {fileID: 0}

@@ -6,7 +6,7 @@ public class BotVictoryScreenCounter : MonoBehaviour
     public GameObject GameManager;
     public List <GameObject> NPCSList;
     public TMPro.TextMeshPro AiCounterText;
-    private int AICount;
+    public int AICount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +29,6 @@ public class BotVictoryScreenCounter : MonoBehaviour
                
             }
 
-        }
-    
+        }   
     }
 }
