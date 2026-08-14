@@ -41,7 +41,7 @@ public class BedScript : MonoBehaviour
                 if (GameManager.GetComponent<GameManagerScript>().NPCSEntering.Count == 0)
                 {
                     print("Sleep");
-                    //GameManager.GetComponent<GameManagerScript>().NewDay();
+                    GameManager.GetComponent<GameManagerScript>().NewDay();
                     VictoryScreenDemo();
                 }
                 else

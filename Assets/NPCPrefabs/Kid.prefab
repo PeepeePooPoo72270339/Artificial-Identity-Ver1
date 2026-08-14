@@ -29,6 +29,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'FakeSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -8416074940691288470, guid: b1c8a40d87fa18c4290b245591d7d557, type: 3}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: EnteringDialogue.Array.size
       value: 3
       objectReference: {fileID: 0}

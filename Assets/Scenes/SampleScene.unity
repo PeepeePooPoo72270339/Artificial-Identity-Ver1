@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.92
       objectReference: {fileID: 0}
+    - target: {fileID: 4211434086528700850, guid: bc6777a8774956b4eb270eab6322c80e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4253506218579693418, guid: bc6777a8774956b4eb270eab6322c80e, type: 3}
       propertyPath: m_SortingOrder
       value: 6
@@ -662,6 +666,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 4563947302665778642, guid: bc6777a8774956b4eb270eab6322c80e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2055701539095661466, guid: bc6777a8774956b4eb270eab6322c80e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7566063286443850680, guid: bc6777a8774956b4eb270eab6322c80e, type: 3}
