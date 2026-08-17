@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: 'FakeSprites.Array.data[0]'
       value: 
-      objectReference: {fileID: 2379100976209705860, guid: 015efb4f99dc19345bc3744585666ae8, type: 3}
+      objectReference: {fileID: -7837256183406097834, guid: 60fa97e1b4e58534ab2414c6e6ea8bb0, type: 3}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4704293243506385638, guid: e83a1d5374eb5504290c6c01721f50be, type: 3}
+      objectReference: {fileID: 7972943079583976038, guid: 60c7c16f7e81b5746aa04add589d5c05, type: 3}
     - target: {fileID: 5244105016526377020, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_SortingOrder
       value: -1

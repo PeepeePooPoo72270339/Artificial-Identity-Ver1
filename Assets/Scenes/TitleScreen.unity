@@ -1197,6 +1197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681811099}
   - component: {fileID: 1681811098}
+  - component: {fileID: 1681811100}
   m_Layer: 0
   m_Name: TitleScreen_0
   m_TagString: Untagged
@@ -1261,7 +1262,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1681811099
 Transform:
@@ -1278,6 +1279,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681811100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681811097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65e644d2b7f50e4089a0b7357d6ef84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleScreenRandomizer
+  titleScreenIm: {fileID: 1681811098}
+  TitleScreens:
+  - {fileID: 21300000, guid: eca28ae0015267d429c191098825876f, type: 3}
+  - {fileID: 21300000, guid: 1afe98b3d3280ad43a2bbd6d8b71d294, type: 3}
+  TitleToShow: 0
+  NewSpriteSize: {x: 0, y: 0}
 --- !u!1 &1768518022
 GameObject:
   m_ObjectHideFlags: 0
