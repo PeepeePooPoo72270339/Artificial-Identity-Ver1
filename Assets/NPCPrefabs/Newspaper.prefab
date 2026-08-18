@@ -32,6 +32,30 @@ PrefabInstance:
       propertyPath: 'FakeSprites.Array.data[0]'
       value: 
       objectReference: {fileID: 6679295004401939170, guid: b3b85f372fc2b374e86d0d4214aadf29, type: 3}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: EnteringDialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[0]'
+      value: Extra! Extra! The AI population is on the rise!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[1]'
+      value: Would you like a paper, sir?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[2]'
+      value: "No? Alrighty then\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[3]'
+      value: "Guess I\u2019ve got more friendly faces to ask around town then!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[4]'
+      value: "I-if you let me in, that is\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

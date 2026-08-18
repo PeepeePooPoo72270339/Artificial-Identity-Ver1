@@ -316,6 +316,30 @@ PrefabInstance:
       propertyPath: 'Day2Dialogue.Array.data[8]'
       value: Mimic Man in person instead of online?
       objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: EnteringDialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[0]'
+      value: "\u201CHello, good sir!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[1]'
+      value: Have you noticed the increased numbers of AI disguised as humans lately
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[2]'
+      value: "I have a theory\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[3]'
+      value: But be warned, this theory of mine gets intense
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[4]'
+      value: if you have a minute.
+      objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9

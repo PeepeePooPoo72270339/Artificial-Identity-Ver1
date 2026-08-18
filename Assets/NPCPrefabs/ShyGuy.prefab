@@ -32,6 +32,19 @@ PrefabInstance:
       propertyPath: 'FakeSprites.Array.data[0]'
       value: 
       objectReference: {fileID: -7837256183406097834, guid: 60fa97e1b4e58534ab2414c6e6ea8bb0, type: 3}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[0]'
+      value: "H-hi, it\u2019s nice to, um\u2026 meet you\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[1]'
+      value: "Uh, can I go in please\u2026 sorry if I\u2019m bothering you.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176052760742695683, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
+      propertyPath: 'EnteringDialogue.Array.data[2]'
+      value: "I-if it\u2019s okay with you, I\u2019d like to get this interaction
+        out of the way fast."
+      objectReference: {fileID: 0}
     - target: {fileID: 3780991611323433160, guid: d3b636e822bce604282bf47659f5d6cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
